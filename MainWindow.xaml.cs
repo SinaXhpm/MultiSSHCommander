@@ -143,8 +143,8 @@ namespace MultiSSH_Manager
                 MainList.ItemsSource = Model.MyList;
                 await Runcmd(server.Addr.Trim(), server.User, int.Parse(server.Port), server.Password.Substring(20), server.Command, index);
             }
-            File.AppendAllText(Directory.GetCurrentDirectory() + "\\results.txt",
-            "========= FINISH ========= " + Environment.NewLine + "https://github.com/SinaXhpm/LudenSsh" + Environment.NewLine);
+            File.AppendAllText(logfile,
+            "========= FINISH ========= " + Environment.NewLine + "https://github.com/SinaXhpm/MultiSSHCommander" + Environment.NewLine);
             this.logs.AppendText("Log File Saved - "+logfile+".txt" + Environment.NewLine);
             this.PowerButton.Source = new BitmapImage(new Uri("Assets/start.png", UriKind.Relative));
             PowerButton.IsEnabled = true;
@@ -159,7 +159,7 @@ namespace MultiSSH_Manager
         {
             Process myProcess = new Process();
             myProcess.StartInfo.UseShellExecute = true;
-            myProcess.StartInfo.FileName = "https://github.com/sinaxhpm";
+            myProcess.StartInfo.FileName = "https://github.com/SinaXhpm/MultiSSHCommander";
             myProcess.Start();
         }
     }
