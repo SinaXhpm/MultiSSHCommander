@@ -1,0 +1,25 @@
+﻿<Window x:Class="MultiSSH_Manager.AddServer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiSSH_Manager"
+        mc:Ignorable="d"
+        Title="Add Server" Height="290" Width="320" ResizeMode="NoResize" Icon="Assets/add.ico">
+    <Grid Background="#DCDCDC">
+        <Label Content="Address :" HorizontalAlignment="Left" Margin="6,5,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.976,1.447"/>
+        <Label Content="Port :" HorizontalAlignment="Left" Margin="203,4,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="74,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="Port"  Text="{Binding Port}" HorizontalAlignment="Left" Margin="246,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50"/>
+        <Label Content="Username :" HorizontalAlignment="Left" Margin="6,24,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="Username"  Text="{Binding Username}" HorizontalAlignment="Left" Margin="88,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <Label Content="Password :" HorizontalAlignment="Left" Margin="6,47,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="88,57,0,0" VerticalAlignment="Top" Width="201"/>
+        <Label Content="Command :" HorizontalAlignment="Left" Margin="6,78,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.524,0.321"/>
+        <TextBox x:Name="Command" Text="{Binding Cmd}" HorizontalAlignment="Left" Margin="6,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="285" Height="68"/>
+
+        <Button Content="Add" HorizontalAlignment="Center" Margin="0,205,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" Height="44" FontSize="14"/>
+        <Label Content="Leave boxes empty to use default values." HorizontalAlignment="Left" Margin="4,167,0,0" VerticalAlignment="Top" FontSize="14" HorizontalContentAlignment="Stretch" Width="274" Foreground="#FFD52C2C"/>
+
+    </Grid>
+</Window>
